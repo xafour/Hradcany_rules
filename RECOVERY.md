@@ -1,5 +1,4 @@
-
-## 🔧 RECOVERY SCÉNÁŘE
+# 🔧 RECOVERY SCÉNÁŘE
 
 **Verze:** 0.9  
 **Datum:** 2026-01-06  
@@ -23,13 +22,13 @@ AI sleduje využití tokenů a varuje:
 ### **Scénář #2: Zjištění ztráty kontextu**
 1. Člověk: "Tohle jsme řešili v chatu #15"
 2. AI: STOP všechno kódování
-3. AI: `git log --grep="[klíčové slovo]"` → najde rozhodnutí
+3. Člověk poskytne výsledek: `git log --grep="[klíčové slovo]"`
 4. AI: Přečte a resumé: "Rozuměl jsem, je to XYZ"
 5. Pokračujeme
 
 ### **Scénář #3: Dokument byl erodován**
 1. Zjistíme že chybí důležité info
-2. AI: `git log -p <soubor>` → najde kde bylo smazáno
+2. Člověk spustí: `git log -p <soubor>` → najde kde bylo smazáno
 3. Obnová chybějící kontext
 4. Append rozhodnutí proč bylo obnoveno
 5. Commit: "RESTORE: <soubor> missing sections"

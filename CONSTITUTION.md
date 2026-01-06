@@ -26,15 +26,15 @@ Když potřebujeme změnit něco v základním dokumentu, nevypouštíme starou 
 
 ---
 
-### **PRAVIDLO #2: Rozhodnutí se jen přidávají, nikdy nemažou**
+### **PRAVIDLO #2: Rozhodnutí se jen přidávají, nikdy nemazat**
 
-Každé důležité rozhodnutí zapíšeme do samostatného souboru ve složce `decisions/`. Tyto soubory už nikdy nemažeme - pouze přidáváme nové, nebo vytvoříme novou verze stávajícího rozhodnutí.
+Každé důležité rozhodnutí zapíšeme do samostatného souboru ve složce `decisions/`. Tyto soubory už nikdy nemažeme - pouze přidáváme nové, nebo vytvoříme novou verzi stávajícího rozhodnutí.
 
 Když v nějakém chatu rozhodneme něco důležitého (například "TOP-5 kandidátů se neukládají do databáze"), vytvoříme nový soubor s datem a názvem rozhodnutí, například `2025-12-31_top_k_no_db.md`. Pokud později změníme rozhodnutí, vytvoříme novou verzi tohoto dokumentu s novým datem.
 
 **Důvod:** Máme tak kompletní historii všech rozhodnutí včetně vysvětlení proč jsme to rozhodli.
 
-**Kontrola:** Na konci každého chatu zkontrolovat změny v `decisions/` - povoleno pouze přidávání nových souborů nebo noví verze, žádný dokument nesmí být smazán.
+**Kontrola:** Na konci každého chatu zkontrolovat změny v `decisions/` - povoleno pouze přidávání nových souborů nebo nové verze, žádný dokument nesmí být smazán.
 
 ---
 
@@ -56,7 +56,7 @@ Na začátku každého nového chatu AI napíše: "Čtu dokumentaci před začá
 
 Na konci každého chatu, kdy jsme něco změnili v dokumentaci, musí člověk zkontrolovat co AI změnilo a schválit to.
 
-Pokud kontrola nemůže proběhnout (třeba kvůli token limit), musí proběhnout obnovení dle recoery scénářů.
+Pokud kontrola nemůže proběhnout (třeba kvůli token limit), musí proběhnout obnovení dle recovery scénářů (viz RECOVERY.md).
 
 AI napíše: "Prosím zkontroluj změny v dokumentaci pomocí: git diff". Člověk si zobrazí změny, zkontroluje jestli AI nepřepsalo základní dokumenty nebo needitovalo staré rozhodnutí. Teprve po schválení se změny commitnou.
 
@@ -87,5 +87,5 @@ Když v průběhu chatu zjistíme, že AI něco zapomnělo nebo se ptá na věci
 
 ---
 
-**Tento dokument je sám immutable (verze v1).**  
+**Tento dokument je sám immutable (verze v0.9).**  
 **Změna = nová verze (v2).**

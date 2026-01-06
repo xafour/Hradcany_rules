@@ -14,6 +14,8 @@ Tento soubor říká co číst kdy. Ne všechno je potřeba vždy.
 
 1. **CONSTITUTION.md** - Pravidla projektu (5 zákonů)
 2. **INDEX.md** - Tento soubor (co číst dnes)
+2. **PRINCIPLES.md** - Principy použité v projektu
+2. **RECOVERY.md** - Jak se zotavit při přerušení práce
 3. **Posledních 5 decisions/** - Nedávná rozhodnutí
 
 ---
@@ -59,6 +61,8 @@ Tento soubor říká co číst kdy. Ne všechno je potřeba vždy.
 **MANDATORY:**
 - ✅ CONSTITUTION.md
 - ✅ INDEX.md
+- ✅ PRINCIPLES.md
+- ✅ RECOVERY.md
 - ✅ Posledních 5 decisions/
 
 **SELEKTIVNÍ:**
