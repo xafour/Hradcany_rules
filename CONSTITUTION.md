@@ -1,6 +1,6 @@
 # 🏛️ ÚSTAVA PROJEKTU HRADČANY
 
-**Verze:** 0.9  
+**Verze:** 0.9.1  
 **Datum:** 2026-01-06  
 **Status:** ✅ DRAFT (ACTIVE)
 
@@ -8,39 +8,35 @@
 
 ## 🎯 ÚČEL
 
-Tento dokument definuje neporušitelná pravidla pro kontinuitu projektu přes desítky nebo stovky chatů s AI asistenty a možné změny v AI systémech.
-
----
+Tento dokument definuje základní pravidla pro zachování kontinuity projektu. Tato pravidla jsou považována při práci s projektem jako neporušitelná.
 
 ## 📜 ZÁKLADNÍ PRAVIDLA
 
-### **PRAVIDLO #1: Základní dokumenty se nikdy nepřepisují**
+### **PRAVIDLO #1: Základní dokumenty a rozhodnutí se nikdy nemažou**
 
-Ve složce `base/` jsou uloženy základní dokumenty popisující architekturu projektu. Tyto dokumenty jsou neměnné - jednou napsané se už nikdy nepřepisují ani neupravují.
+Základní dokumenty popisují architekturu projektu a jsou uloženy ve složce `base/`.
 
-Když potřebujeme změnit něco v základním dokumentu, nevypouštíme starou verzi. Místo toho vytvoříme nový soubor s vyšším číslem verze. Například pokud máme `ARCHITECTURE_v1.md` a potřebujeme ho aktualizovat, vytvoříme `ARCHITECTURE_v2.md`. Starý soubor `v1` smažeme, ale zůstane v Git historii.
+Každé důležité rozhodnutí zapíšeme do samostatného souboru ve složce `decisions/`.
 
-**Důvod:** Díky tomu máme vždy k dispozici původní informace v Git historii. Když zjistíme, že jsme něco zapomněli, můžeme se kdykoliv vrátit k předchozí verzi.
+Tyto dokumenty a rozhodnutí jsou měnitelné pouze novou verzí. Jednou napsané se už nikdy nemažou.
 
-**Kontrola:** Na konci každého chatu zkontrolovat změny v `base/` pomocí `git diff base/`.
+Číslo verze a datum aktualizace je uedeno v dokumentu, soubor s novou verzí má stejné jméno jako stará verze.
+
+**Důvod:** Jednou rozhodnuté se v průběhu času neztratí a souvislosti při další práci na projektu nejsou v čase zapomenuty. 
+
+**Kontrola:** Na konci každého chatu zkontrolovat jestli v `base/` a v `decisions/` nebyly smazány soubory.
 
 ---
 
-### **PRAVIDLO #2: Rozhodnutí se jen přidávají, nikdy nemazat**
+### **PRAVIDLO #2: Seznam základních dokumentů a rozhodnutí**
 
-Každé důležité rozhodnutí zapíšeme do samostatného souboru ve složce `decisions/`. Tyto soubory už nikdy nemažeme - pouze přidáváme nové, nebo vytvoříme novou verzi stávajícího rozhodnutí.
-
-Když v nějakém chatu rozhodneme něco důležitého (například "TOP-5 kandidátů se neukládají do databáze"), vytvoříme nový soubor s datem a názvem rozhodnutí, například `2025-12-31_top_k_no_db.md`. Pokud později změníme rozhodnutí, vytvoříme novou verzi tohoto dokumentu s novým datem.
-
-**Důvod:** Máme tak kompletní historii všech rozhodnutí včetně vysvětlení proč jsme to rozhodli.
-
-**Kontrola:** Na konci každého chatu zkontrolovat změny v `decisions/` - povoleno pouze přidávání nových souborů nebo nové verze, žádný dokument nesmí být smazán.
+Existuje mapa dokumentace v souboru `INDEX.md` se seznamem všech základních dokumentů a rozhodnutí. V tomto souboru je uvedeno, kterou část dokumentace číst a kdy.
 
 ---
 
 ### **PRAVIDLO #3: Každý nový chat začíná čtením dokumentace**
 
-Když začínáme nový chat, AI asistent musí nejdříve přečíst všechny základní dokumenty a všechna zaznamenaná rozhodnutí z minulosti.
+Když začínáme nový chat, začínáme čtením všech základních dokumentů a seznamem všech zaznamenaných rozhodnutí z minulosti.
 
 Na začátku každého nového chatu AI napíše: "Čtu dokumentaci před začátkem práce..." a postupně načte `CONSTITUTION.md`, `INDEX.md` a další soubory v hlavním adresáři, relevantní soubory z `base/` a nedávná rozhodnutí z `decisions/`. Teprve potom může začít pracovat.
 

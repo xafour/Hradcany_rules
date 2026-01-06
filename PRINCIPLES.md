@@ -18,7 +18,7 @@ Tento dokument definuje kódovací principy a best practices pro projekt Hradča
 
 Každá funkce, každý algoritmus, každý kus logiky je implementován pouze jednou v celém projektu.
 
-**Důvod:** Eliminace duplicitního kódu zabraňuje inconsistenci, usnadňuje údržbu a snižuje riziko bugů.
+**Důvod:** Eliminace duplicitního kódu zabraňuje nekonzistenci, usnadňuje údržbu a snižuje riziko chyb.
 
 **Příklad správně:**
 ```python

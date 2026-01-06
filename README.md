@@ -4,9 +4,7 @@
 **Datum:** 2026-01-06  
 **Status:** ✅ DRAFT (ACTIVE)
 
-Tento repozitář obsahuje dokumentaci designu, architektonických rozhodnutí a workflow specifikací pro projekt rozpoznávání československých poštovních známek série Hradčany.
-
-Repozitář obsahuje pouze designovou dokumentaci.
+Tento repozitář obsahuje dokumentaci designu, rozhodnutí a specifikací pro projekt rozpoznávání československých poštovních známek série Hradčany.
 
 ---
 

@@ -94,5 +94,3 @@ Tento soubor říká co číst kdy. Ne všechno je potřeba vždy.
 ## 📌 POZNÁMKY
 
 - **Když si nejsi jistý:** Radši přečti více než méně
-- **První chat projektu:** Přečti VŠECHNO v base/
-- **Ztráta kontextu:** Přečti VŠECHNO znovu
