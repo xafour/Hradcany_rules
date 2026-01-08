@@ -1,8 +1,8 @@
 # 🏛️ ÚSTAVA PROJEKTU HRADČANY
 
-**Verze:** 0.9.2  
+**Verze:** 0.9.9  
 **Datum:** 2026-01-08  
-**Status:** ✅ DRAFT (ACTIVE)
+**Status:** ✅ DRAFT (READY TO PUBLISH)
 
 ---
 
@@ -16,10 +16,10 @@ Tento dokument definuje základní pravidla pro zachování kontinuity projektu.
 
 - Základní dokumenty popisují architekturu projektu a jsou uloženy ve složce `base/`.
 - Každé důležité rozhodnutí zapíšeme do samostatného souboru ve složce `decisions/`.
-- Tyto dokumenty a rozhodnutí jsou měnitelné pouze novou verzí. Jednou napsané se už nikdy nemažou.
-- Číslo verze a datum aktualizace je uedeno v dokumentu, soubor s novou verzí má stejné jméno jako stará verze.
+- Tyto dokumenty a rozhodnutí jsou měnitelné pouze novou verzí. Jednou napsané se už nikdy nemažou.  
+- Číslo verze a datum aktualizace je uvedeno v dokumentu, soubor s novou verzí má stejné jméno jako stará verze.  
 
-**Důvod:** Jednou rozhodnuté se v průběhu času neztratí a souvislosti při další práci na projektu nejsou v čase zapomenuty. 
+**Důvod:** Jednou rozhodnuté se v průběhu času nezapomene a souvislosti při další práci na projektu nejsou v čase zapomenuty. 
 
 **Kontrola:** Na konci každého chatu zkontrolovat jestli v `base/` a v `decisions/` nebyly smazány soubory.
 
@@ -35,9 +35,9 @@ Tento dokument definuje základní pravidla pro zachování kontinuity projektu.
 
 ### **PRAVIDLO #3: Každý nový chat začíná čtením dokumentace**
 
-- První prompt pro nový chat obsahuje informaci, co je dalším úkolem, jakou částí projektu se budeme v daném chatu zaobírat. 
+- První prompt pro nový chat obsahuje informaci, jaký je úkol pro tento chat.
 - Nový chat začínáme čtením celého textu všech základních dokumentů **TIER 1** a seznamem všech dokumentů a zaznamenaných rozhodnutí **TIER 2**.
-- Z iniciace promtu vybereme kapitolu z **TIER 2**, která bude přečtená celá a přečteme ji. Její přečtení bude explicitně potvrzeno.
+- Z iniciace promptu vybereme kapitolu z **TIER 2**, která bude přečtená celá a přečteme ji. Její přečtení bude explicitně potvrzeno.
 
 Teprve potom může začít pracovat.
 
@@ -45,14 +45,15 @@ Teprve potom může začít pracovat.
 - AI si obnoví kontext projektu, nemusí se ptát na věci, které jsme už vyřešili a bude postupovat s povědomím o detailech projektu.  
 - Bude vědět, co již bylo naprogramováno a jak a nebude vytvářet duplicitní zdrojový kód.
 
-**Kontrola:** Vzájmené potvrzení přečtení".
+**Kontrola:** Vzájemné potvrzení přečtení.
 
 ---
 
-### **PRAVIDLO #4: Konec každého chatu musí projít kontrolou**
+### **PRAVIDLO #4: Na konci každého chatu budou zkušenosti a rozhodnutí zaznamenány**
 
-- Na konci každého chatu, kdy jsme něco změnili v dokumentaci, musí člověk zkontrolovat co AI změnilo a schválit to.
-- Pokud kontrola nemůže proběhnout (třeba kvůli token limit), musí proběhnout obnovení dle recovery scénářů (viz RECOVERY.md).
+- Na konci každého chatu budou zkušenosti z aktuálního chatu zaznamenány do souborů dokumentace v `base/` a `decisions/`.
+- Když jsme něco změnili v dokumentaci, musí člověk změny zkontrolovat a schválit je.
+- Pokud zaznamenání nemůže proběhnout (třeba kvůli token limit), musí proběhnout obnovení dle recovery scénářů (viz RECOVERY.md).
 
 AI napíše: "Prosím zkontroluj změny v dokumentaci pomocí: git diff". Člověk si zobrazí změny, zkontroluje jestli AI nepřepsalo základní dokumenty nebo needitovalo staré rozhodnutí. Teprve po schválení se změny commitnou.
 
@@ -66,14 +67,15 @@ AI napíše: "Prosím zkontroluj změny v dokumentaci pomocí: git diff". Člov�
 
 - Když v průběhu chatu zjistíme, že AI něco zapomnělo nebo se ptá na věci které jsme už vyřešili, zastavíme všechnu práci. 
 - V historii dokumentace najdeme kdy a jak jsme to rozhodli. Pomocí `git log`nebo procházením  najdeme v historii.
-- Pokud chybí kontext, který byl zadán pouze do některého promptu v minulosti a v dalším průběhu projektu se ztratil z aktivních znalostí (to je nejčastější situace), bude popsán formou nového rozhodnutí.
+- Pokud chybí kontext, který byl zadán pouze do některého promptu v minulosti a v dalším průběhu projektu se ztratil  
+  z aktivních znalostí (to je nejčastější situace), bude popsán formou nového rozhodnutí.
 - Přečteme si rozhodnutí a pak pokračujeme.
 
-**Důvod:** Kontext arozhodnutí, které popíšeme formou, která se neztatí v promptech, se nemusí opakovaně popisovat v jednotlivých chatech. 
+**Důvod:** Kontext a rozhodnutí popsaná ve formě, která se neztratí v jednotlivých promptech, se nemusí opakovaně popisovat. 
 
 **Kontrola:** Když člověk řekne "stop, tohle jsme už řešili", přestaneme, vytvoříme dokument s informací a pak pokračujeme.
 
 ---
 
-**Tento dokument je sám immutable (verze v0.9.2).**  
+**Tento dokument je sám immutable (verze v0.9.3).**  
 **Změna = nová verze (v1).**
