@@ -1,7 +1,7 @@
 # 🏛️ ÚSTAVA PROJEKTU HRADČANY
 
-**Verze:** 0.9.1  
-**Datum:** 2026-01-07  
+**Verze:** 0.9.2  
+**Datum:** 2026-01-08  
 **Status:** ✅ DRAFT (ACTIVE)
 
 ---
@@ -42,7 +42,7 @@ Tento dokument definuje základní pravidla pro zachování kontinuity projektu.
 Teprve potom může začít pracovat.
 
 **Důvod:** 
-- AI si obnoví kontext projektu a nemusí se ptát na věci, které jsme už vyřešili.  
+- AI si obnoví kontext projektu, nemusí se ptát na věci, které jsme už vyřešili a bude postupovat s povědomím o detailech projektu.  
 - Bude vědět, co již bylo naprogramováno a jak a nebude vytvářet duplicitní zdrojový kód.
 
 **Kontrola:** Vzájmené potvrzení přečtení".
@@ -65,13 +65,15 @@ AI napíše: "Prosím zkontroluj změny v dokumentaci pomocí: git diff". Člov�
 ### **PRAVIDLO #5: Když zjistíme ztrátu kontextu, máme postup jak ho obnovit**
 
 - Když v průběhu chatu zjistíme, že AI něco zapomnělo nebo se ptá na věci které jsme už vyřešili, zastavíme všechnu práci. 
-- Pomocí `git log` najdeme v historii kdy a jak jsme to rozhodli. Přečteme si původní rozhodnutí a pak pokračujeme.
+- V historii dokumentace najdeme kdy a jak jsme to rozhodli. Pomocí `git log`nebo procházením  najdeme v historii.
+- Pokud chybí kontext, který byl zadán pouze do některého promptu v minulosti a v dalším průběhu projektu se ztratil z aktivních znalostí (to je nejčastější situace), bude popsán formou nového rozhodnutí.
+- Přečteme si rozhodnutí a pak pokračujeme.
 
-**Důvod:** Chyby se stanou. Důležité není chyby nedělat, ale mít jasný způsob jak se z nich dostat. Díky Git historii a decision souborům můžeme vždy najít co jsme ztratili.
+**Důvod:** Kontext arozhodnutí, které popíšeme formou, která se neztatí v promptech, se nemusí opakovaně popisovat v jednotlivých chatech. 
 
-**Kontrola:** Když člověk řekne "stop, tohle jsme už řešili", AI okamžitě přestane, najde v historii správnou informaci a pak pokračujeme.
+**Kontrola:** Když člověk řekne "stop, tohle jsme už řešili", přestaneme, vytvoříme dokument s informací a pak pokračujeme.
 
 ---
 
-**Tento dokument je sám immutable (verze v0.9).**  
-**Změna = nová verze (v2).**
+**Tento dokument je sám immutable (verze v0.9.2).**  
+**Změna = nová verze (v1).**
