@@ -2,7 +2,6 @@
 
 **Verze:** 0.9  
 **Datum:** 2026-01-06  
-**Status:** ✅ DRAFT (ACTIVE)
 
 ### **Scénář #1: Token limit během chatu**
 

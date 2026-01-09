@@ -2,13 +2,12 @@
 
 Tento soubor říká co číst kdy. Ne všechno je potřeba vždy.
 
-**Verze:** 0.9  
-**Datum:** 2026-01-07  
-**Status:** ✅ DRAFT (ACTIVE)
+**Verze:** 0.9.1  
+**Datum:** 2026-01-09  
 
 ---
 
-## 🎯 TIER 1: VŽDY (každý chat)
+## 🎯 TIER 1: ČÍST VŽDY (každý chat)
 
 **Povinné čtení před začátkem práce v chatu:**
 
@@ -16,47 +15,73 @@ Tento soubor říká co číst kdy. Ne všechno je potřeba vždy.
 2. **INDEX.md** - Tento soubor (co číst dnes)
 3. **PRINCIPLES.md** - Principy použité v projektu
 4. **RECOVERY.md** - Jak se zotavit při přerušení práce
-
-
----
-
-## 📖 TIER 2: PODLE ÚKOLU (selektivní)
-
-### **Architektura & Pipeline**
-
-**ARCHITECTURE.md**
-- **Čti když:** Změny v pipeline, refaktoring, nové moduly
-- **Přeskoč když:** UI změny, dokumentace updates
-- **Obsah:** Pipeline overview, moduly, DB schema, file storage
-
-**RECOGNIZE_STAMP_FLOW.md**
-- **Čti když:** Práce na recognize_stamp.py, auto-detect, embedding matching
-- **Přeskoč když:** DB changes, GT workflow, UI
-- **Obsah:** Krok-po-kroku pipeline, auto-detect logika
+5. **ARCHITECTURE.md** Architektura systému
 
 ---
 
-### **Domain Knowledge**
+## 📖 TIER 2: ČÍST PODLE ÚKOLU (selektivní)
 
-**DOMAIN_KNOWLEDGE.md**
-- **Čti když:** První chat, nepochopení filatelistického kontextu
-- **Přeskoč když:** Refaktoring známého kódu
-- **Obsah:** Co je TD, ZP, kresba, historický kontext známek
+**Čtení před začátkem práce v chatu selektivně dle úkolu**
+
+### **Hlavní pipeline**
+
+- **Čti když:** Pracuješ na pipeline rozeznání známek
+- **Přeskoč když:** 
+- **[base/pipeline.md](./base/pipeline.md)**
 
 ---
 
 ### **GT Management**
-
-**GT_WORKFLOW.md**
-- **Čti když:** Práce na UC-1 až UC-17
-- **Přeskoč když:** Recognition pipeline, model training
-- **Obsah:** User workflows, expert workflows, use cases
+- **Čti když:** 
+- **Přeskoč když:** 
 
 ---
 
-## 🔍 JAK POUŽÍT TENTO INDEX
+### **Augmentace**
+- **Čti když:** 
+- **Přeskoč když:** 
 
+---
 
-## 📌 POZNÁMKY
+### **YOLO model**
+- **Čti když:** 
+- **Přeskoč když:** 
 
-- **Když si nejsi jistý:** Radši přečti více než méně
+---
+
+### **Struktura databáze**
+- **Čti když:** 
+- **Přeskoč když:** 
+
+---
+
+### **Use cases**
+- **Čti když:** 
+- **Přeskoč když:** 
+
+---
+
+### **Struktura systému**
+- **Čti když:** 
+- **Přeskoč když:** 
+
+---
+
+### **Embeddingy**
+- **Čti když:** 
+- **Přeskoč když:** 
+
+---
+
+### **Známky série Hradčany**
+- **Čti když:** 
+- **Přeskoč když:** 
+
+---
+
+### **Struktura adresářů projektu**
+- **Čti když:** 
+- **Přeskoč když:** 
+
+---
+

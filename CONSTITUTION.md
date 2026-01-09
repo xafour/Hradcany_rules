@@ -2,7 +2,6 @@
 
 **Verze:** 0.9.9  
 **Datum:** 2026-01-08  
-**Status:** ✅ DRAFT (READY TO PUBLISH)
 
 ---
 
@@ -76,6 +75,3 @@ AI napíše: "Prosím zkontroluj změny v dokumentaci pomocí: git diff". Člov�
 **Kontrola:** Když člověk řekne "stop, tohle jsme už řešili", přestaneme, vytvoříme dokument s informací a pak pokračujeme.
 
 ---
-
-**Tento dokument je sám immutable (verze v0.9.3).**  
-**Změna = nová verze (v1).**
