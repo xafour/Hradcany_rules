@@ -85,3 +85,9 @@ Tento soubor říká co číst kdy. Ne všechno je potřeba vždy.
 
 ---
 
+### **Přesnost detekce známek**
+- **Čti když:** 
+- **Přeskoč když:** 
+
+---
+

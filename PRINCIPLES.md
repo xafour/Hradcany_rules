@@ -1,13 +1,13 @@
 # 💻 KÓDOVACÍ PRINCIPY
 
-**Verze:** 0.9  
-**Datum:** 2026-01-06  
+**Verze:** 0.9.1  
+**Datum:** 2026-01-09  
 
 ---
 
 ## 🎯 ÚČEL
 
-Tento dokument definuje kódovací principy a best practices pro projekt Hradčany. Na rozdíl od CONSTITUTION.md, který obsahuje neměnná pravidla workflow, tento dokument popisuje konkrétní principy pro psaní kódu.
+Tento dokument definuje kódovací principy a best practices pro projekt Hradčany.
 
 ---
 
@@ -125,9 +125,6 @@ Při práci s AI asistenty prioritizuj kvalitu nad kvantitou. Raději spotřebuj
 3. Testovat (20% tokenů)
 4. Commit (10% tokenů)
 
-**Chat #3 - Implementace části B:**
-- Pokračování...
-
 **Pravidlo "Nikam nespěcháme":**
 - Když člověk řekne "tohle je složité", AI nesmí skočit rovnou do programování
 - Místo toho: "Pojďme to rozdělit na části", "Nejdřív prostudujeme existující kód"
@@ -140,7 +137,7 @@ Při práci s AI asistenty prioritizuj kvalitu nad kvantitou. Raději spotřebuj
 
 Stejný vstup musí vždy produkovat stejný výstup. Žádné random inicializace, žádné závislosti na časovém razítku, žádné race conditions.
 
-**Důvod:** Reprodukovatelnost je klíčová pro debugging a vědeckou práci.
+**Důvod:** Reprodukovatelnost je klíčová pro debugging a stabilní prostředí pro práci.
 
 **Příklad správně:**
 ```python
@@ -167,7 +164,6 @@ Explicitní kód je lepší než implicitní magie. Raději o pár řádků víc
 def recognize_stamp_from_array(
     warped_bgr: np.ndarray,
     drawing_id: int,
-    env: str = 'dev',
     topk: int = 10,
     debug: bool = False
 ) -> Dict[str, Any]:
@@ -177,7 +173,6 @@ def recognize_stamp_from_array(
     Args:
         warped_bgr: Warped známka (1300x1100x3, BGR, uint8)
         drawing_id: ID kresby (1-6)
-        env: Prostředí (dev/prod/sandbox)
         topk: Počet kandidátů k vrácení
         debug: Debug výpisy
         
@@ -215,7 +210,7 @@ python test_batch_recognition.py --baseline 6800
 # ✅ PASS - no regression
 ```
 
-**Enforcement:** CI/CD pipeline - automatický batch test při push.
+**Enforcement:** batch test při push.
 
 ---
 
@@ -283,7 +278,7 @@ def load_scan(scan_id: int, conn) -> Dict:
 
 ### **PRINCIP #10: Paths from paths.json**
 
-Všechny cesty k souborům musí být načítány z `config/paths.json` pomocí `load_config.py`. Žádné hardcoded cesty v kódu.
+Všechny cesty k souborům a adresářům musí být načítány z `config/paths.json` pomocí `load_config.py`. Žádné hardcoded cesty v kódu.
 
 **Příklad správně:**
 ```python
@@ -302,21 +297,3 @@ db_path = "dev/db/hradcany.sqlite"  # ❌ Hardcoded!
 
 ---
 
-## 📋 CHECKLIST PRO CODE REVIEW
-
-Při code review kontroluj:
-
-- [ ] Žádné duplicitní funkce/kód
-- [ ] Root cause řešen, ne workaround
-- [ ] Zpětná kompatibilita zachovaná
-- [ ] Type hints přítomné
-- [ ] Docstringy u public funkcí
-- [ ] Komentáře česky, kód anglicky
-- [ ] Žádné hardcoded cesty
-- [ ] Fail fast s jasnou chybou
-- [ ] Deterministické chování (fixní seedy)
-- [ ] Batch test prošel (96%+)
-
----
-
-**Tento dokument je živý - aktualizuje se když objevíme nové principy nebo anti-patterns.**
