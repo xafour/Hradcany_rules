@@ -6,6 +6,7 @@ https://raw.githubusercontent.com/xafour/Hradcany_rules/main/INDEX.md
 https://raw.githubusercontent.com/xafour/Hradcany_rules/main/PRINCIPLES.md
 https://raw.githubusercontent.com/xafour/Hradcany_rules/main/RECOVERY.md
 https://raw.githubusercontent.com/xafour/Hradcany_rules/main/PROJECT_STATUS.md
+https://raw.githubusercontent.com/xafour/Hradcany_rules/main/ARCHITECTURE.md
 
 AKTUÁLNÍ ÚKOL: otestovat, jestli načteš dokumentaci z odkazů výše a porozumíš kontextu.
 
