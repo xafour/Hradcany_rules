@@ -2,7 +2,7 @@
 
 Tento soubor říká co číst kdy. Ne všechno je potřeba vždy.
 
-**Verze:** 0.9.1  
+**Verze:** 1.0.0 
 **Datum:** 2026-01-09  
 
 ---

@@ -16,5 +16,5 @@ POSTUP:
 3. Z INDEX vyber a přečti relevantní TIER 2 dokumenty
 4. Potvrď přečtení a zeptej se na detaily úkolu
 
-Verze 1.0
+Verze 1.0.0
 Datum: 2026-01-09

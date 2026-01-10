@@ -1,6 +1,6 @@
 # Hradčany Rules - Projektová dokumentace
 
-**Verze:** 0.9.8  
+**Verze:** 1.0.0 
 **Datum:** 2026-01-09  
 
 Tento repozitář obsahuje dokumentaci designu, rozhodnutí a specifikací pro projekt rozpoznávání československých poštovních známek série Hradčany.

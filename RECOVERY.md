@@ -1,7 +1,7 @@
 # 🔧 RECOVERY SCÉNÁŘE
 
-**Verze:** 0.9  
-**Datum:** 2026-01-06  
+**Verze:** 1.0.0  
+**Datum:** 2026-01-09  
 
 ### **Scénář #1: Token limit během chatu**
 

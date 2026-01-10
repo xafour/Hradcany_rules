@@ -1,7 +1,7 @@
 # 🏛️ ÚSTAVA PROJEKTU HRADČANY
 
-**Verze:** 0.9.9  
-**Datum:** 2026-01-08  
+**Verze:** 1.0.1  
+**Datum:** 2026-01-10  
 
 ---
 
@@ -13,8 +13,35 @@ Tento dokument definuje základní pravidla pro zachování kontinuity projektu.
 
 ### **PRAVIDLO #1: Základní dokumenty a rozhodnutí se nikdy nemažou**
 
-- Základní dokumenty popisují architekturu projektu a jsou uloženy ve složce `base/`.
+#### **base/** - Odborná a technická dokumentace systému a problematiky
+- Obsahuje základní dokumenty popisují architekturu projektu a jsou uloženy ve složce `base/`.
+
+  ***CO SEM PATŘÍ:***
+  - Popis souvislostí odborné problematiky známek série Hradčany se systémem
+  - Popis architektury (pipeline, database schema, file storage)
+  - Workflow diagramy (jak systém funguje)
+  - API reference (jaké funkce existují)
+  - Best practices (jak správně používat systém)
+
+#### **decisions/** - Rozhodnutí a jejich odůvodnění
 - Každé důležité rozhodnutí zapíšeme do samostatného souboru ve složce `decisions/`.
+
+  ***CO SEM PATŘÍ:***
+  - Popis rozhodnutí (CO jsme se rozhodli)
+  - Odůvodnění (PROČ jsme se tak rozhodli)
+  - Souvislosti (jaké faktory jsme zohlednili)
+  - Důsledky (co z toho vyplývá pro implementaci)
+
+#### **tasks/** - Implementační kroky a milestones
+- Obsahuje dokumentaci implementačních kroků
+
+  ***CO SEM PATŘÍ:***
+  - Plánované tasky
+  - Dokončené milestones
+  - Status tracking (co je uděláno, jaké jsou další implementační kroky, priority)
+  - Handover messages mezi chaty (kde jsme skončili, co pokračuje)
+
+#### Pravidla práce s dokumenty
 - Tyto dokumenty a rozhodnutí jsou měnitelné pouze novou verzí. Jednou napsané se už nikdy nemažou.  
 - Číslo verze a datum aktualizace je uvedeno v dokumentu, soubor s novou verzí má stejné jméno jako stará verze.  
 
@@ -51,15 +78,22 @@ Teprve potom může začít pracovat.
 ### **PRAVIDLO #4: Na konci každého chatu budou zkušenosti a rozhodnutí zaznamenány**
 
 - Na konci každého chatu budou zkušenosti z aktuálního chatu zaznamenány do souborů dokumentace v `base/` a `decisions/`.
+- Každý dokument MUSÍ být psán jako popisný text v celých větách (podmět + přísudek), jako firemní směrnice nebo rozhodnutí vedení. Odrážky s hesly mohou být použity pouze jako doplňková struktura k již vysvětlenému textu.
 - Když jsme něco změnili v dokumentaci, musí člověk změny zkontrolovat a schválit je.
 - Pokud zaznamenání nemůže proběhnout (třeba kvůli token limit), musí proběhnout obnovení dle recovery scénářů (viz RECOVERY.md).
 
 AI napíše: "Prosím zkontroluj změny v dokumentaci pomocí: git diff". Člověk si zobrazí změny, zkontroluje jestli AI nepřepsalo základní dokumenty nebo needitovalo staré rozhodnutí. Teprve po schválení se změny commitnou.
 
-**Důvod:** Hlavní ochrana proti tomu, aby se dokumenty postupně zkracovaly a ztrácely důležité informace.
+**Důvod:** Hlavní ochrana proti tomu, aby se dokumenty postupně zkracovaly a ztrácely důležité informace. Dokumenty v `base/` a `decisions/` slouží jako dlouhodobá firemní znalostní báze. Musí být srozumitelné i po měsících nebo letech, když se k nim vrátíme. Heslovitý styl s odrážkami vede k postupné erozi kontextu.
 
-**Kontrola:** Jednoduchá - na konci chatu `git diff` a schválení nebo zamítnutí změn.
+**ENFORCEMENT:**
+- AI nikdy nevytvoří dokument v `base/` nebo `decisions/` bez popisného úvodního odstavce vysvětlujícího CO a PROČ
+- Technické detaily (SQL, kód, příklady) jsou vždy AŽ PO vysvětlujícím textu
+- Heslovité odrážky jsou povoleny pouze jako doplňková navigace
+- Při code review (git diff) člověk zkontroluje, že nový/upravený dokument splňuje tento požadavek
 
+**KONTROLA:**
+Na konci chatu se člověk zeptá: "Rozumím tomuto dokumentu i když se k němu vrátím za rok?" Pokud ne → dokument je heslovitý → AI musí přepsat popisně.
 ---
 
 ### **PRAVIDLO #5: Když zjistíme ztrátu kontextu, máme postup jak ho obnovit**
