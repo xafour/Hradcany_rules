@@ -1,7 +1,7 @@
 # 🏛️ ÚSTAVA PROJEKTU HRADČANY
 
 **Verze:** 1.0.1  
-**Datum:** 2026-01-10  
+**Datum:** 2026-01-13  
 
 ---
 
@@ -82,9 +82,16 @@ Teprve potom může začít pracovat.
 - Když jsme něco změnili v dokumentaci, musí člověk změny zkontrolovat a schválit je.
 - Pokud zaznamenání nemůže proběhnout (třeba kvůli token limit), musí proběhnout obnovení dle recovery scénářů (viz RECOVERY.md).
 
-AI napíše: "Prosím zkontroluj změny v dokumentaci pomocí: git diff". Člověk si zobrazí změny, zkontroluje jestli AI nepřepsalo základní dokumenty nebo needitovalo staré rozhodnutí. Teprve po schválení se změny commitnou.
+Člověk si zobrazí změny, zkontroluje jestli nejsou přepsány základní dokumenty nebo editována stará rozhodnutí bez změny verze. Teprve po schválení se změny commitnou.
 
 **Důvod:** Hlavní ochrana proti tomu, aby se dokumenty postupně zkracovaly a ztrácely důležité informace. Dokumenty v `base/` a `decisions/` slouží jako dlouhodobá firemní znalostní báze. Musí být srozumitelné i po měsících nebo letech, když se k nim vrátíme. Heslovitý styl s odrážkami vede k postupné erozi kontextu.
+
+**TEMPLATES:**
+Ve složce `base/` se pro:
+- popis souvislostí odborné problematiky známek série Hradčany se systémem použije template `base_template_domain.md` v této složce.
+- pro popis technické dokumentace se použije template `base_template_tech.md` v této složce.
+Pro popis rozhodnutí v `decisions/` se použije template `decisions_template.md` v této složce.
+Pro popis úkolů v `tasks/` se použije template `task_template.md` v této složce.
 
 **ENFORCEMENT:**
 - AI nikdy nevytvoří dokument v `base/` nebo `decisions/` bez popisného úvodního odstavce vysvětlujícího CO a PROČ
